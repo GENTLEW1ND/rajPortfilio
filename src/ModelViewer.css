@@ -1,0 +1,40 @@
+.canvas {
+  height: 100vh !important;
+}
+/* Default styles */
+.model-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.model-container canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Media query for small screens (e.g., larger mobile phones) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .model-container {
+    width: 80%; /* Adjust as needed */
+    height: 352px; /* Adjust as needed */
+  }
+}
+
+/* Media query for medium screens (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .model-container {
+    width:80%; /* Adjust as needed */
+    height: 325px; /* Adjust as needed */
+  }
+}
+
+/* Media query for large screens (e.g., desktops) */
+@media (max-width: 1024px) {
+  .model-container {
+    width: 100%; /* Adjust as needed */
+    height: 352px;/* Adjust as needed */
+  }
+}

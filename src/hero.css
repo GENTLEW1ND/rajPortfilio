@@ -1,0 +1,123 @@
+.hero{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.hero__img{
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+}
+.hero__sub{
+    color: var(--clr-slate600);
+    font-size: var(--size-sm);
+    line-height: 0.9;
+}
+.hero__title{
+    color:var(--clr-slate400);
+    text-transform: uppercase;
+    font-size: var(--size-1xl);
+    letter-spacing: -0.05;
+    line-height: 0.9;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.hero__description{
+    max-width: 60ch;
+    font-size: var(--size-sm);
+    color: var(--clr-slate600);
+}
+.social-container{
+
+}
+.image-social {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+}
+
+.image-social:hover {
+    box-shadow: 0 0 20px rgba(255, 102, 102, 0.5),
+        0 0 30px rgba(255, 102, 102, 0.5),
+        0 0 40px rgba(255, 102, 102, 0.5),
+        0 0 50px rgba(255, 102, 102, 0.5);
+}
+/* xs */
+@media (min-width: 475px){
+    .hero{
+        gap: 1.5rem;
+    }
+    .hero__img{
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+    .hero__sub{
+        font-size: var(--size-base);
+    }
+    .hero__title{
+        font-size: var(--size-5xl);
+    }
+    .hero__description{
+        font-size: var(--size-base);
+    }
+    .hero__btn{
+        font-size: var(--size-base);
+    }
+}
+
+/* sm */
+/* @media (min-width: 640px){} */
+
+/* md */
+@media (min-width: 768px){}
+
+/* lg */
+@media (min-width: 1024px){
+    .hero__img{
+        width: 8rem;
+        height: 8rem;
+    }
+    .hero__sub{
+        font-size: var(--size-2xl);
+    }
+    .hero__title{
+        font-size: var(--size-7xl);
+    }
+    .hero__description{
+        font-size: var(--size-xl);
+        max-width: 90ch;
+    }
+    .hero__btn{
+        font-size: var(--size-xl);
+    }
+}
+
+/* xl */
+@media (min-width: 1280px){
+    .hero{
+        gap: 2rem;
+    }
+    .hero__img{
+        width: 10rem;
+        height: 10rem;
+    }
+    .hero__sub{
+        font-size: var(--size-3xl);
+    }
+    .hero__title{
+        font-size: var(--size-7xl);
+    }
+    .hero__description{
+        font-size: var(--size-1xl);
+    }
+    .hero__btn{
+        font-size: var(--size-2xl);
+    }
+}
+
+/* xxl */
+/* @media (min-width: 1536px){} */

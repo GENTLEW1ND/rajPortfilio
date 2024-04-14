@@ -1,0 +1,135 @@
+/* Global styles */
+:root {
+    --clr-slate400: #6b7280;
+    --clr-slate600: #4b5563;
+    --size-5xl: 3rem;
+    --size-2xl: 1.5rem;
+    --size-sm: 0.875rem;
+}
+
+/* About section */
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10rem;
+    gap: 1rem;
+    width: 100vw;
+}
+
+.about__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about__title {
+    font-size: var(--size-5xl);
+    color: var(--clr-slate400);
+    text-align: center;
+}
+
+.about__description {
+    max-width: 90ch;
+    font-size: var(--size-2xl);
+    color: var(--clr-slate600);
+    text-align: center;
+}
+
+.about__hr {
+    border-color: var(--clr-slate600);
+}
+
+.about__sub {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: var(--size-4xl);
+    color: var(--clr-slate400);
+}
+
+/* About list */
+.inner-ul {
+    list-style: none;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    gap: 4rem;
+    animation: moveAndGlow 2s infinite alternate ease-in-out;
+}
+
+.image {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+}
+
+.image:hover {
+    box-shadow: 0 0 20px rgba(255, 102, 102, 0.5),
+        0 0 30px rgba(255, 102, 102, 0.5),
+        0 0 40px rgba(255, 102, 102, 0.5),
+        0 0 50px rgba(255, 102, 102, 0.5);
+}
+
+.about__list {
+    font-size: var(--size-sm);
+    color: var(--clr-slate600);
+    text-align: center;
+}
+
+/* Animation keyframes */
+@keyframes moveAndGlow {
+    0% {
+        transform: translateY(0);
+        filter: drop-shadow(0 0 0 rgba(97, 89, 89, 0.5));
+    }
+
+    100% {
+        transform: translateY(-7px);
+        filter: drop-shadow(0 0 10px rgba(81, 76, 76, 0.5));
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .inner-ul {
+        /* flex-direction: row; */
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .about__description {
+        max-width: 80vw;
+        font-size: var(--size-sm);
+        color: var(--clr-slate600);
+        text-align: center;
+    }
+
+    .image {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .inner-ul {
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .about__description {
+        max-width: 80vw;
+        font-size: var(--size-sm);
+        color: var(--clr-slate600);
+        text-align: center;
+    }
+
+    .image {
+        width: 3rem;
+        height: 3rem;
+    }
+}
