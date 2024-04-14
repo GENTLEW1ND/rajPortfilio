@@ -22,7 +22,7 @@ const ModelViewer = () => {
   return (
     <div className="model-container" ref={containerRef}>
       <Canvas camera={{ position: [0, 0, 10], fov: 45 }}>
-        <ambientLight intensity={20} />
+        <ambientLight intensity={2} />
         <OrbitControls enableZoom={false} />
         <Earth />
         <Environment preset="sunset" />

@@ -149,16 +149,10 @@ function App() {
               emerging with elegant solutions. My passion for programming
               ignites my <strong>creativity</strong>, fuels my{" "}
               <strong>curiosity</strong>, and drives me to{" "}
-              <strong>constantly learn and grow</strong>. With each project, I
-              approach it with boundless enthusiasm, eager to innovate,
-              collaborate, and make a meaningful impact. My enthusiasm is not
-              just a trait; its a driving force that propels me forward,{" "}
-              <strong>
-                turning obstacles into opportunities and dreams into reality.
-              </strong>{" "}
+              <strong>constantly learn and grow</strong>.
             </p>
             <div className="social-container">
-              <ul className="inner-ul container">
+              <ul className="inner-ul container ">
                 {social.map((el, i) => (
                   <li key={i}>
                     <a href={el.link} target="_blank" rel="noopener noreferrer">
@@ -215,7 +209,7 @@ function App() {
           </section>
 
           <section className="contact-container container section">
-            <div className="contact " id="contact">
+            <div className="contact" id="contact">
               <Contact />
             </div>
             <div>

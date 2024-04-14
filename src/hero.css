@@ -21,7 +21,7 @@
     color:var(--clr-slate400);
     text-transform: uppercase;
     font-size: var(--size-1xl);
-    letter-spacing: -0.05;
+    letter-spacing: 20px;
     line-height: 0.9;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
@@ -30,9 +30,7 @@
     font-size: var(--size-sm);
     color: var(--clr-slate600);
 }
-.social-container{
 
-}
 .image-social {
     width: 3rem;
     height: 3rem;

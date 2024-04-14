@@ -14,7 +14,7 @@ const Contact = () => {
   }, [state.succeeded]);
 
   return (
-    <div className="container">
+    <div className="parent-container">
       <h3 className="contact__title">Hit me up!</h3>
       <form onSubmit={handleSubmit} className="inputs-box">
         <label htmlFor="email" className="label">

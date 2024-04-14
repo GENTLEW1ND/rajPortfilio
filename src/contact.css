@@ -1,7 +1,8 @@
 .contact-container {
-    margin-top: 6rem;
+    /* margin-top: 6rem; */
     display: flex;
 }
+
 
 .contact {
     width: 40%;
@@ -73,15 +74,20 @@
 @media (max-width: 600px) {
     .contact-container {
         flex-direction: column;
+        justify-content: center; /* Center items vertically */
+        align-items: center; /* Center items horizontally */
+        margin-top: 6rem; /* Adjusted top margin */
     }
 
     .contact {
         order: 2; /* Contact goes second */
-        width: 22rem; 
-        margin-left: 0.5rem;
+        width: 89%; /* Adjusted width */
         padding: 2rem;
         gap: 1rem;
         margin-bottom: 2rem;
+        margin:0 100%;
+        align-items: center;
+        justify-content: center;
     }
 
     .label {
@@ -100,10 +106,10 @@
 
     .contact {
         order: 2; /* Contact goes second */
-        width: 30rem; /* Adjusted width */
-        margin-left: 5rem; /* Adjusted margin */
+        width: 70%; /* Adjusted width */
+        margin: 0 auto; /* Center horizontally */
         padding: 4rem; /* Adjusted padding */
-        height: 40rem; /* Adjusted height */
+        height: auto; /* Auto height */
         margin-top: 3rem; /* Add some top margin */
     }
 

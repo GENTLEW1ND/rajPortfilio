@@ -57,6 +57,7 @@
     justify-content: space-evenly;
     gap: 4rem;
     animation: moveAndGlow 2s infinite alternate ease-in-out;
+    margin-top:4rem;
 }
 
 .image {

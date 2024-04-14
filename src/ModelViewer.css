@@ -1,13 +1,9 @@
-.canvas {
-  height: 100vh !important;
-}
-/* Default styles */
-.model-container {
-  width: 100%;
-  height: 100%;
+/* Adjust contact container height to align with model container */
+.contact-container {
+  /* Adjusted height using viewport units */
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .model-container canvas {
@@ -18,23 +14,21 @@
 /* Media query for small screens (e.g., larger mobile phones) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .model-container {
-    width: 80%; /* Adjust as needed */
-    height: 352px; /* Adjust as needed */
+    height: 40vh; /* Adjusted height for smaller screens */
   }
 }
 
 /* Media query for medium screens (e.g., tablets) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .model-container {
-    width:80%; /* Adjust as needed */
-    height: 325px; /* Adjust as needed */
+    height: 45vh; /* Adjusted height for tablets */
   }
 }
 
 /* Media query for large screens (e.g., desktops) */
-@media (max-width: 1024px) {
+@media (min-width: 1025px) {
   .model-container {
-    width: 100%; /* Adjust as needed */
-    height: 352px;/* Adjust as needed */
+    height: 50vh; /* Default height for large screens */
   }
 }
+
