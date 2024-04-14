@@ -1,6 +1,7 @@
 import React from "react";
 import gitImg from "./assets/gitImg.png";
 import xcrptoImg from "./assets/Xcrypto.png";
+import caffixelImg from "./assets/caffixel.png";
 import "./featured.css";
 import "./util.css"
 const projects = () => {
@@ -9,7 +10,7 @@ const projects = () => {
       <div className="card container">
         <div className="card-box ">
         <h3 className="featured__sub">Upcoming Project</h3>
-          <img src={gitImg} alt="image" />
+          <img src={caffixelImg} alt="image" />
           <div className="featured__wrapper">
             <div className="inner__wrapper">
               <h2 className="featured__title">Caffixel</h2>
@@ -40,7 +41,7 @@ const projects = () => {
 
       <div className="card">
         <div className="card-box">
-          <img src={xcrptoImg} alt="" />
+          <img src={gitImg} alt="" />
 
           <div className="featured__wrapper">
             <div className="inner__wrapper">
