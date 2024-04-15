@@ -208,7 +208,7 @@ function App() {
             <Projects />
           </section>
 
-          <section className="contact-container container section">
+          <section className="contact-container container ">
             <div className="contact" id="contact">
               <Contact />
             </div>

@@ -19,7 +19,7 @@
     top: 0;
     left: 0;
     z-index: 1;
-    transition: background-color 1s;
+    transition: background-color .1s ease-in;
 }
 
 .featured__images-wrapper:hover::after {

@@ -84,6 +84,7 @@
         width: 89%; /* Adjusted width */
         padding: 2rem;
         gap: 1rem;
+
         margin-bottom: 2rem;
         margin:0 100%;
         align-items: center;
@@ -94,6 +95,9 @@
         padding-right: 8.5rem; /* Adjusted padding */
         margin-bottom: -10px;
         font-size: var(--size-sm); /* Adjusted font size */
+    }
+    .inputs  {
+        padding:1rem 3rem;
     }
 }
 
@@ -118,6 +122,9 @@
         font-size: var(--size-base); /* Adjusted font size */
     }
 
+    .inputs  {
+        padding:1rem 3rem;
+    }
     
 }
 
