@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 import Contact from "./contact";
 import Projects from "./projects";
 import MobileNav from "./MobileNav";
@@ -30,6 +34,10 @@ import myProfile from "./assets/my profile.jpeg";
 import { useState } from "react";
 
 function App() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   const data = [
     { gif: javaimg, link: "https://www.java.com/en/" },
     {
@@ -67,7 +75,7 @@ function App() {
   };
   function confirmDownload() {
     // Show a confirmation dialog
-    if (window.confirm("Do you want to download the resume?")) {
+    if (window.confirm("Do you want to download the CV?")) {
       // If user confirms, initiate the download
       var link = document.createElement("a");
       link.href = "./assets/my profile.jpeg";
@@ -77,8 +85,7 @@ function App() {
       document.body.removeChild(link);
     }
   }
-  
-  
+
   return (
     <>
       <div>
@@ -90,26 +97,30 @@ function App() {
 
         <header className="header container">
           <nav>
-            <ul className="header__menu">
+            <ul className="header__menu" data-aos="fade-left">
               <li>
-                <a className="header__link" href="#about">
+                <a className="header__link" href="#about"  >
                   About
                 </a>
               </li>
               <li>
-                <a className="header__link" href="#feature">
+                <a className="header__link" href="#feature"  >
                   Work
                 </a>
               </li>
               <li>
-                <a className="header__link" href="#contact">
+                <a className="header__link" href="#contact"  >
                   Contact
                 </a>
               </li>
               <li className="header__line"></li>
               <li>
-                <button className="header__resume btn" onClick={()=>confirmDownload()}>
-                  Resume
+                <button
+                  className="header__resume btn"
+                  onClick={() => confirmDownload()}
+                  data-aos="fade-left"
+                >
+                  Download CV
                 </button>
               </li>
             </ul>
@@ -137,12 +148,19 @@ function App() {
 
         <div>
           <section className="hero container section">
-            <img className="hero__img" src={myProfile} alt="Profile" />
-            <h2 className="hero__sub">Raj Chakraborty</h2>
-            <h1 className="hero__title">
+            <img
+              className="hero__img"
+              src={myProfile}
+              alt="Profile"
+              data-aos="fade-up"
+            />
+            <h2 className="hero__sub" data-aos="fade-right">
+              Raj Chakraborty
+            </h2>
+            <h1 className="hero__title" data-aos="fade-left">
               enthusiastic <br /> programmer
             </h1>
-            <p className="hero__description">
+            <p className="hero__description" data-aos="fade-down">
               Being an enthusiastic programmer is not just about writing code;{" "}
               <strong>its a mindset</strong>, a way of life. Its about embracing
               challenges with a smile. , diving headfirst into problems, and
@@ -154,7 +172,11 @@ function App() {
             <div className="social-container">
               <ul className="inner-ul container ">
                 {social.map((el, i) => (
-                  <li key={i}>
+                  <li
+                    key={i}
+                    data-aos={`fade-${i % 2 === 0 ? "left" : "right"}`}
+                    data-aos-delay={`${i * 5}`}
+                  >
                     <a href={el.link} target="_blank" rel="noopener noreferrer">
                       <img src={el.gif} alt="hello" className="image-social" />
                     </a>
@@ -166,29 +188,37 @@ function App() {
 
           <div id="about" className="about container section">
             <div className="about__content">
-              <h2 className="about__title">About Me</h2>
-              <p className="about__description">
+              <h2 className="about__title" data-aos="fade-up">
+                About Me
+              </h2>
+              <p className="about__description" data-aos="fade-left">
                 Hey there, I’m Raj Chakraborty! A <a>Computer Science</a>{" "}
                 student who’s just as comfortable diving into code as I am
                 crafting seamless user experiences.
               </p>
-              <p className="about__description">
+              <p className="about__description" data-aos="fade-right">
                 I find immense satisfaction in working with team, where i can
                 contribute my skills and expertise towards acheiving our shared
                 goals through collaboration i.e<a> Team-Oriented </a> and{" "}
                 <a>Collaborative</a> individual.
               </p>
-              <p className="about__description">
+              <p className="about__description" data-aos="fade-left">
                 I am always seeking opportunities where i can acquire new
                 knowledge and contribute my expertise i.e
                 <a>Knowledge Enthusiasts</a>.
               </p>
               <hr className="about__hr" />
-              <h1 className="about__sub">Expertise</h1>
+              <h1 className="about__sub" data-aos="fade-up">
+                Expertise
+              </h1>
               <div className="about__ul-container">
                 <ul className="inner-ul container">
                   {data.map((el, i) => (
-                    <li key={i}>
+                    <li
+                      key={i}
+                      data-aos={`fade-${i % 2 === 0 ? "up" : "down"}`}
+                      data-aos-delay={`${i * 5}`}
+                    >
                       <a
                         href={el.link}
                         target="_blank"
@@ -204,22 +234,33 @@ function App() {
           </div>
 
           <section id="feature" className="featured container section">
-            <h1>Projects</h1>
-            <Projects />
+            <h1 data-aos="fade-up">Projects</h1>
+            <div className="container">
+              <Projects />
+            </div>
           </section>
 
           <section className="contact-container container ">
-            <div className="contact" id="contact">
+            <div
+              className="contact"
+              id="contact"
+              data-aos="fade-right"
+              data-aos-offset="300"
+            >
               <Contact />
             </div>
             <div>
-              <div className="model-container container">
+              <div
+                className="model-container container "
+                data-aos="fade-left"
+                data-aos-offset="300"
+              >
                 <ModelViewer />
               </div>
             </div>
           </section>
-        </div>
-        <p className="footer__title">--2024 Copyright--</p>
+        </div >
+        <p className="footer__title" >--2024 Copyright--</p>
       </div>
     </>
   );

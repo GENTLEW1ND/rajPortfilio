@@ -1,13 +1,20 @@
-import React from "react";
+import { useEffect } from "react";
 import gitImg from "./assets/gitImg.png";
 import xcrptoImg from "./assets/Xcrypto.png";
 import caffixelImg from "./assets/caffixel.png";
 import "./featured.css";
 import "./util.css"
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const projects = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <div className="parent-card container">
-      <div className="card container">
+      <div className="card container"  data-aos="fade-right">
         <div className="card-box ">
         <h3 className="featured__sub">Upcoming Project</h3>
           <img src={caffixelImg} alt="image" />
@@ -39,8 +46,8 @@ const projects = () => {
         </div>
       </div>
 
-      <div className="card">
-        <div className="card-box">
+      <div className="card"  data-aos="fade-left">
+        <div className="card-box" >
           <img src={gitImg} alt="" />
 
           <div className="featured__wrapper">
@@ -73,8 +80,8 @@ const projects = () => {
         </div>
       </div>
 
-      <div className="card">
-        <div className="card-box">
+      <div className="card" data-aos="fade-right">
+        <div className="card-box" >
           <img src={xcrptoImg} alt="" />
 
           <div className="featured__wrapper">

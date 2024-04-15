@@ -1,15 +1,15 @@
 .mobile-nav {
     position: fixed;
     top: 4rem; 
-    right: 1rem;
+    right: 6rem;
     z-index: 999;
-    width: 7rem;
+    width: 9rem;
     background-color: var(--clr-dark);
     display: flex;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    padding: 1rem; 
+    padding: 2rem; 
     text-align: center;
     border-radius: 15px;
   }
@@ -21,13 +21,13 @@
   }
   
   .mobile-nav__link {
-    font-size: var(--size-sm);
+    font-size: var(--size-base);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 900;
     color: var(--clr-slate600);
     letter-spacing: -0.05em;
     transition: color 0.3s;
-    margin-bottom: 1rem; /* Adjust as needed */
+    margin-bottom: 1rem; 
   }
   
   .mobile-nav__link:hover {
@@ -35,3 +35,7 @@
     font-size: var(--size-1xl);
   }
   
+  .mobile-nav__resume{
+    margin-top:7.5px;
+    font-size:.7rem;
+  }
