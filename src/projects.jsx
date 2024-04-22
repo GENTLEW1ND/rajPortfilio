@@ -86,7 +86,7 @@ const projects = () => {
 
           <div className="featured__wrapper">
             <div className="inner__wrapper">
-              <h2 className="featured__title">Crypto coin</h2>
+              <h2 className="featured__title">Xcrypto</h2>
               <a
                 className="featured__link"
                 href="https://cryptocoin-blue.vercel.app/"

@@ -11,11 +11,11 @@ function MobileNav() {
 
   function confirmDownload() {
     // Show a confirmation dialog
-    if (window.confirm("Do you want to download the CV?")) {
+    if (window.confirm("Do you want to download the Resume?")) {
       // If user confirms, initiate the download
       var link = document.createElement("a");
-      link.href = "./assets/my profile.jpeg";
-      link.download = "my_profile.jpeg";
+      link.href = "./assets/rajResume.pdf";
+      link.download = "rajResume.jpeg";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -32,7 +32,7 @@ function MobileNav() {
                   className="mobile-nav__resume btn"
                   onClick={() => confirmDownload()}
                 >
-                  Download CV
+                  Download Resume
                 </button></li>
       </ul>
     </div>
