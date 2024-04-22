@@ -1,4 +1,4 @@
-.header{
+.header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -7,34 +7,34 @@
     position: relative;
     z-index: 9999;
 }
-.header__menu{
+
+.header__menu {
     display: none;
 }
-.header__bars{
+
+.header__bars {
     color: var(--clr-slate400);
     width: var(--size-3xl);
     height: var(--size-3xl);
     display: block;
 }
-.header__resume{
+
+.header__resume {
     margin-top: -2px;
 }
-/* xs */
-/* @media (min-width: 475px){} */
 
-/* sm */
-/* @media (min-width: 640px){} */
 
 /* md */
-@media (min-width: 768px){
-    .header__menu{
+@media (min-width: 768px) {
+    .header__menu {
         display: flex;
         align-items: center;
         list-style: none;
         padding: 0;
         gap: 2em;
     }
-    .header__link{
+
+    .header__link {
         font-size: var(--size-xs);
         text-decoration: none;
         font-weight: 600;
@@ -42,57 +42,54 @@
         letter-spacing: -0.05em;
         transition: color 0.5s;
     }
-    .header__link:hover{
+
+    .header__link:hover {
         color: var(--clr-rose);
     }
-    .header__line{
+
+    .header__line {
         border: 1px solid var(--clr-slate600);
         padding-top: 1.5em;
     }
-    .header__sun{
-        color: var(--clr-slate600);
-        width: var(--size-base);
-        height: var(--size-base);
-        display: block;
-    }
-    .header__resume{
+
+    .header__resume {
         font-size: var(--size-xs);
     }
-    .header__bars{
+
+    /* Remove display: none; from here */
+    .header__bars {
         display: none;
     }
-
 
 }
 
 /* lg */
-@media (min-width: 1024px){
-    .header__menu{
+@media (min-width: 1024px) {
+    .header__menu {
         gap: 3em;
     }
-    .header__bars{
+
+    .header__bars {
         width: var(--size-5xl);
         height: var(--size-5xl);
     }
-    .header__link{
+
+    .header__link {
         font-size: var(--size-1xl);
     }
-    .header__line{
+
+    .header__line {
         border: 1px solid var(--clr-slate600);
         padding-top: 1.5em;
     }
-    .header__sun{
+
+    .header__sun {
         width: var(--size-2xl);
         height: var(--size-2xl);
         display: block;
     }
-    .header__resume{
+
+    .header__resume {
         font-size: var(--size-1xl);
     }
 }
-
-/* xl */
-/* @media (min-width: 1280px){} */
-
-/* xxl */
-/* @media (min-width: 1536px){} */

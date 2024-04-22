@@ -15,7 +15,7 @@ function MobileNav() {
       // If user confirms, initiate the download
       var link = document.createElement("a");
       link.href = "./assets/rajResume.pdf";
-      link.download = "rajResume.jpeg";
+      link.download = "rajResume.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

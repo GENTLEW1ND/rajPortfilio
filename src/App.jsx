@@ -129,7 +129,7 @@ function App() {
               className="header__bars"
               onClick={() => handleMobileMenuToggle()}
             >
-              <svg
+              <svg className="header_bars_svg"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
